@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock Profile & Loss Calculator</title>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.google.com/s2/u/0/favicons?domain=neog.camp"
-    />
     <link rel="stylesheet" href="styles/styles.css" />
+    <title>Stock Profile & Loss Calculator</title>
   </head>
   <body>
+    <nav class="navigation container">
+        <div class="nav-brand">Dhruvin Mehta</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="index.html">Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://dhruvinmehta.netlify.app">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://dhruvinmehta.netlify.app/pages/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
     <header>
-      <h1>Stock Profile & Loss Calculator</h1>
+      <h1 class="heading">Stock Profile & Loss Calculator</h1>
     </header>
-    <main>
+    <main class="main">
       <label class="input-label" for="initial-price">
-        Intial Price
+        Buying Price
         <input
           class="input"
           type="text"
@@ -35,7 +44,7 @@
         />
       </label>
       <label class="input-label" for="current-price"
-        >Current Price
+        >Current Selling Price
         <input
           class="input"
           type="text"
@@ -43,38 +52,24 @@
           placeholder="Enter the Current Price of the stocks"
       /></label>
 
-      <button id="submit-btn" class="btn-check">Tell Me!!</button>
+      <button id="submit-btn" class="btn-check">Profit or Loss?</button>
 
       <div id="output-box" class="output"></div>
     </main>
-    <footer>
-      <p>© | 2021 | adarshbalika</p>
-      <ul class="list-unordered inline-list">
-        <li>
-          <a class="links" href="https://github.com/neogcamp/" target="_blank">
-            <img src="images/icons/github.svg" alt="github" />
-          </a>
-        </li>
-        <li>
-          <a class="links" href="https://bit.ly/tanaydiscord" target="_blank">
-            <img src="images/icons/discord.svg" alt="discord" />
-          </a>
-        </li>
-        <li>
-          <a class="links" href="https://twitter.com/neogcamp" target="_blank">
-            <img src="images/icons/twitter.svg" alt="twitter" />
-          </a>
-        </li>
-        <li>
-          <a
-            class="links"
-            href="https://www.instagram.com/neogcamp"
-            target="_blank"
-          >
-            <img src="images/icons/instagram.svg" alt="instagram" />
-          </a>
-        </li>
-      </ul>
+    <footer class="footer">
+        <div class="footer-header">Social Media Handles</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/dhruvin25799">
+                    <img src="./images/icons/github.svg" alt="Github">
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://linkedin.com/in/dhruvin-mehta-21a8a7190">
+                    <img src="./images/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
     </footer>
     <script src="scripts/main.js"></script>
   </body>
