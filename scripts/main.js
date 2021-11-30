@@ -22,20 +22,30 @@ function calculateProfitAndLoss(initial, quantity, current) {
         var lossPercentage = (loss / initial) * 100;
 
         showOutput(
-            `Oops, the loss is ${loss} and the percent is ${lossPercentage}%`
+            `Oops, the loss is ${loss} and the loss percentage is ${lossPercentage}%`, "loss"
         );
     } else if (current > initial) {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
 
         showOutput(
-            `Woahhhhh!, the profit is ${profit} and the percent is ${profitPercentage}%`
+            `Woahhhhh!, the profit is ${profit} and the profit percentage is ${profitPercentage}%`, "profit"
         );
     } else {
         showOutput(`No profit no loss, boss!`);
     }
 }
 
-function showOutput(message) {
+function showOutput(message, style) {
+    if (style == "profit") {
+        outputBox.style.border = "2px dotted green";
+        outputBox.style.color = "green";
+    } else if (style == "loss") {
+        outputBox.style.border = "2px dotted red";
+        outputBox.style.color = "red";
+    } else {
+        outputBox.style.border = "2px dotted red";
+        outputBox.style.color = "green";
+    }
     outputBox.innerHTML = message;
 }
